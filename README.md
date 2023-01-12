@@ -1,0 +1,2 @@
+# dictionaryKata
+Kata
