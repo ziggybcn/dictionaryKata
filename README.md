@@ -1,4 +1,4 @@
-# dictionaryKata
+# Anagrams Dictionary Kata
 
 Kata
 
