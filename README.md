@@ -8,7 +8,7 @@ Por ejemplo: bored y robed son anagramas entre sí, igual que artist, strait y t
 
 El objetivo de la Kata es crear una lista ordenada de todas las palabras que son anagramas entre sí, partiendo del documento English.txt que podéis encontrar en la carpeta adjunta.
 
-##Enfoque de la Kata
+## Enfoque de la Kata
 
 Para resolver esta kata, hay 3 enfoques posibles:
 
