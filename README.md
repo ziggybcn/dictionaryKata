@@ -1,4 +1,4 @@
-# Anagrams Dictionary Kata
+# Anagrams Dictionary Kata (game)
 
 Kata
 
@@ -6,19 +6,43 @@ Nuestro CEO nos ha pedido que identifiquemos todas las palabras del diccionario 
 
 Por ejemplo: bored y robed son anagramas entre sí, igual que artist, strait y traits también lo son entre sí.
 
-El objetivo de la Kata es crear una lista ordenada de todas las palabras que son anagramas entre sí, partiendo del documento English.txt que podéis encontrar en la carpeta adjunta.
+El objetivo de la Kata es crear una lista de todas las palabras que son anagramas entre sí, partiendo del documento English.txt que podéis encontrar en la carpeta adjunta.
+
+La lista de anagramas no hace falta que esté ordenada de ninguna forma específica.
 
 ## Enfoque de la Kata
 
-Para resolver esta kata, hay 3 enfoques posibles:
+Esta kata es una kata gamificada, pensada para hacerse en varios grupos de Mob (o parejas) a la vez.
 
-* Trabajar para que el algoritmo sea lo más eficiente en tiempo de ejecución posible.
+### Primera fase del juego:
 
-* Trabajar para que el código sea lo más matenible posible.
+En una primera iteración, cada equipo se centrará en hacer el algoritmo más eficiente (en tiempo de ejecución) posible. 
 
-* Trabajar para que el código sea lo más adaptable posible.
+Quien gana esta fase:
 
-Queremos cubrir los 3 enfoques a la vez. La idea es ver qué resultados obtenemos según cual de los enfoques escojamos de partida.
+* El primer equipo que llegue a un tiempo de ejecución de 15ms o menos gana.
 
+* Si nadie llega a esos tiempos, el equipo que tenga un tiempo de ejecución más pequeño al terminar el timebox gana.
 
+Nota: buscamos entregar rápido un código muy optimizado así que:
+
+Viva la complejidad accidental, la sobreingeniería, los shortcuts y las guarrerías locas que se os puedan ocurrir. Está bien gnerar legacy en esta parte.
+
+### Segunda fase del juego
+
+Pongamos que hemos conseguido un tiempo de ejecución razonable en la fase anterior. Ahora nos toca convertir el código en código bonito y fácil de mantener.
+
+Cómo se gana esta fase:
+
+* Teniendo un test de performance sobre el algoritmo anterior, que no sea flacky
+
+* Teniendo cobertura de test que "demuestre" que el algoritmo funciona
+
+* Habiendo conseguido una versión orientada a objetos, con alta cohesión, bajo acoplamiento (SOLID etc etc etc...)
+
+El equipo que antes considere que tiene una versión suficientemente buena, gana, siempre que el resto de personas estén deacuerdo :)
+
+### Tercera fase
+
+Compartimos learnings, estrategias, y lo que veamos que puede tener valor para el resto de personas.
 
