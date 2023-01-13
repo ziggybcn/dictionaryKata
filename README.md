@@ -4,7 +4,7 @@ Kata
 
 Nuestro CEO nos ha pedido que identifiquemos todas las palabras del diccionario en Inglés que son anagramas, es decir, identificar todas las palabras del diccionario que se escriben con las mismas letras de otra palabra, en distinto orden.
 
-Por ejemplo: bored y robed son anagramas entre sí, igual que artist, strait y traits también lo son entre sí.
+Por ejemplo: _bored_ y _robed_ son anagramas entre sí, igual que _artist_, _strait_ y _traits_ también lo son entre sí.
 
 El objetivo de la Kata es crear una lista de todas las palabras que son anagramas entre sí, partiendo del documento English.txt que podéis encontrar en la carpeta adjunta.
 
@@ -24,23 +24,25 @@ Quien gana esta fase:
 
 * Si nadie llega a esos tiempos, el equipo que tenga un tiempo de ejecución más pequeño al terminar el timebox gana.
 
-Nota: buscamos entregar rápido un código muy optimizado así que:
+**IMPORTANTE**: buscamos entregar rápido un código muy optimizado así que ¡Viva la complejidad accidental, la sobreingeniería, los shortcuts y las guarrerías locas que se os puedan ocurrir!
 
-Viva la complejidad accidental, la sobreingeniería, los shortcuts y las guarrerías locas que se os puedan ocurrir. Está bien gnerar legacy en esta parte.
+Está bien generar legacy en esta parte, usar concurrencia, ChatGPT o lo que sea que os parezca que os puede ayudar a terminar antes y ganar esta parte.
 
 ### Segunda fase del juego
 
-Pongamos que hemos conseguido un tiempo de ejecución razonable en la fase anterior. Ahora nos toca convertir el código en código bonito y fácil de mantener.
+Asumiendo que hemos conseguido un tiempo de ejecución razonable en la fase anterior, ahora nos toca convertir el código en código bonito y fácil de mantener.
 
 Cómo se gana esta fase:
 
-* Teniendo un test de performance sobre el algoritmo anterior, que no sea flacky
+* Manteniendo el tiempo de ejecución conseguido con el código anterior (la ejecución debería ser igual de buena que antes, ese es el "valor" que queremos proteger).
+
+* Teniendo un test de performance sobre el algoritmo anterior, que no sea flacky y nos garantice que el tiempo de ejecución no se ha degradado. (_nBench_ puede ser útil en este punto).
 
 * Teniendo cobertura de test que "demuestre" que el algoritmo funciona
 
-* Habiendo conseguido una versión orientada a objetos, con alta cohesión, bajo acoplamiento (SOLID etc etc etc...)
+* Habiendo conseguido una versión orientada a objetos, con alta cohesión, bajo acoplamiento, SOLID etc etc etc...
 
-El equipo que antes considere que tiene una versión suficientemente buena, gana, siempre que el resto de personas estén deacuerdo :)
+El equipo que antes considere que tiene una versión _suficientemente buena_ gana esta parte, siempre que consiga convencer al resto de participantes :)
 
 ### Tercera fase
 
