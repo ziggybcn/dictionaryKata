@@ -1,12 +1,10 @@
 # Anagrams Dictionary Kata (game)
 
-Kata
-
 Nuestro CEO nos ha pedido que identifiquemos todas las palabras del diccionario en Inglés que son anagramas, es decir, identificar todas las palabras del diccionario que se escriben con las mismas letras de otra palabra, en un orden distinto.
 
-Por entender en qué consiste esto de los anagramas: {_bored_ , _robed_} son un conjunto de anagramas, igual que {_artist_, _strait_, _traits_} también lo son.  
+Por entender en qué consiste esto de los anagramas: {_bored_ , _robed_} son un conjunto de anagramas, igual que {_artist_, _strait_, _traits_} también lo son. Otro ejemplo sería {_pores, poser, prose, ropes, spore}. 
 
-Al parecer hay una gran oportunidad en el mercado de los anagramas, y si conseguimos implementar este algoritmo en los próximos MINUTOS, posiblemente generemos dinero suficiente como para vivir sin preocupaciones el resto de nuestrass vidas (y las de nuestra descendencia durante varias generaciones, así que esto VA MUY EN SERIO).
+Al parecer hay una gran oportunidad en el mercado de los anagramas, y si conseguimos implementar este algoritmo en los próximos MINUTOS, posiblemente generemos dinero suficiente como para vivir sin preocupaciones el resto de nuestras vidas (y las de nuestra descendencia durante varias generaciones, así que esto VA MUY EN SERIO).
 
 El objetivo de la Kata es **crear una lista de todos los conjuntos de anagramas que existen en el idioma Inglés**, partiendo del documento English.txt que podéis encontrar en la carpeta documents del repo.
 
