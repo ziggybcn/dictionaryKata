@@ -2,7 +2,7 @@
 
 Nuestro CEO nos ha pedido que identifiquemos todas las palabras del diccionario en Inglés que son anagramas, es decir, identificar todas las palabras del diccionario que se escriben con las mismas letras de otra palabra, en un orden distinto.
 
-Por entender en qué consiste esto de los anagramas: {_bored_ , _robed_} son un conjunto de anagramas, igual que {_artist_, _strait_, _traits_} también lo son. Otro ejemplo sería {_pores, poser, prose, ropes, spore_}. 
+Por entender en qué consiste esto de los anagramas: {_bored_ , _robed_} son un conjunto de anagramas, igual que {_artist_, _strait_, _traits_} también lo son. Otro ejemplo sería {_pores, poser, prose, ropes, spore_}. Si os fijáis en cada conjunto, cada una de las palabra del conjunto se escribe con las mismas letras que el resto de palabras, sólo que las letras aparecen en un orden distinto.
 
 Al parecer hay una gran oportunidad en el mercado de los anagramas, y si conseguimos implementar este algoritmo en los próximos MINUTOS, posiblemente generemos dinero suficiente como para vivir sin preocupaciones el resto de nuestras vidas (y las de nuestra descendencia durante varias generaciones, así que esto VA MUY EN SERIO).
 
