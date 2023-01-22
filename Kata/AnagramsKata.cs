@@ -6,7 +6,6 @@ namespace Kata;
 
 public class AnagramsKata
 {
-    private const int MinimumWordsToBeAnAnagram = 2;
     private readonly List<AnagramGroup> _anagrams = new(5000);
 
     public IEnumerable<IEnumerable<string>> Anagrams => _anagrams;
@@ -21,7 +20,7 @@ public class AnagramsKata
         var wordHashTuplesList = GenerateWordsHashTuples(words);
         var dictionaryProcessor = new DictionaryProcessor(wordHashTuplesList);
         dictionaryProcessor.ProcessAllDictionaryWords(
-            anagramGroup => _anagrams.Add(anagramGroup));
+            detectedAnagramGroup => _anagrams.Add(detectedAnagramGroup));
         
         var timeLapse = time.ElapsedMilliseconds;
 
