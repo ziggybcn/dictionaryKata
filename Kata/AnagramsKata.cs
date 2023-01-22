@@ -1,6 +1,5 @@
 ﻿using System.Collections.Concurrent;
 using System.Diagnostics;
-
 // ReSharper disable PossibleMultipleEnumeration
 
 namespace Kata;
@@ -17,11 +16,13 @@ public class AnagramsKata
         ClearUpFromPreviousIteration();
 
         var time = Stopwatch.StartNew();
-
+    
         var words = GetAllWords(stream);
         var wordHashTuplesList = GenerateWordsHashTuples(words);
-        ProcessAllDictionaryWords(wordHashTuplesList);
-
+        var dictionaryProcessor = new DictionaryProcessor(wordHashTuplesList);
+        dictionaryProcessor.ProcessAllDictionaryWords(
+            anagramGroup => _anagrams.Add(anagramGroup));
+        
         var timeLapse = time.ElapsedMilliseconds;
 
         if (verbose){
@@ -39,14 +40,7 @@ public class AnagramsKata
         _anagrams.Clear(); //this will generate tones of garbage so we're collecting before the algorithm kicks in.
         GC.Collect();
     }
-
-    private void ProcessAllDictionaryWords(IEnumerable<WordHashTuple> dictionaryWords)
-    {
-        var anagramsIdDictionary = new Dictionary<string, AnagramGroup>();
-        foreach (var dictionaryWord in dictionaryWords)
-            ProcessWord(anagramsIdDictionary, dictionaryWord);
-    }
-
+    
     private static IEnumerable<WordHashTuple> GenerateWordsHashTuples(IEnumerable<string> words)
     {
         var wordHashTuples = new ConcurrentBag<WordHashTuple>();
@@ -76,30 +70,5 @@ public class AnagramsKata
 
         return words;
     }
-
-    private void ProcessWord(IDictionary<string, AnagramGroup> anagramsIdDictionary, WordHashTuple word)
-    {
-        var thisAnagramGroupExists = anagramsIdDictionary.TryGetValue(word.AnagramHash, out var anagramsGroup);
-        if (thisAnagramGroupExists){
-            AddWordToExistingAnagramsGroup(word, anagramsGroup!);
-        }
-        else{
-            anagramsGroup = new AnagramGroup { word.Word };
-            anagramsIdDictionary.Add(word.AnagramHash, anagramsGroup);
-        }
-    }
-
-    private void AddWordToExistingAnagramsGroup(WordHashTuple word, AnagramGroup anagramsGroup)
-    {
-        if (anagramsGroup.Contains(word.Word)) return;
-        anagramsGroup.Add(word.Word);
-        if (anagramsGroup is { Count: >= MinimumWordsToBeAnAnagram, MarkedAsValidAnagramGroup: false }){
-            _anagrams.Add(anagramsGroup);
-            anagramsGroup.MarkedAsValidAnagramGroup = true;
-        }
-    }
-    private class AnagramGroup : List<string>
-    {
-        public bool MarkedAsValidAnagramGroup;
-    }
+    
 }
