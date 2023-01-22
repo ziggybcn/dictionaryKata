@@ -2,7 +2,7 @@ using Kata;
 
 namespace AnagramTests;
 
-class AnagramIdCreatorTest
+internal class AnagramIdCreatorTest
 {
     [Test]
     public void AnagramsShouldHaveTheSameAnagramId()

@@ -11,17 +11,13 @@ internal class ResultsDumper
 
     internal void ShowResultsInConsole()
     {
-        foreach (var group in _anagrams){
-            DumpAnagramsGroup(group);
-        }
+        Console.WriteLine($"There are {_anagrams.Count()} anagram groups:");
+        foreach (var group in _anagrams) DumpAnagramsGroup(group);
     }
 
     private void DumpAnagramsGroup(IEnumerable<string> list)
     {
-        foreach (var item in list){
-            Console.Write(item + ", ");
-        }
-
-        Console.WriteLine();
+        var items = string.Join(",", list);
+        Console.WriteLine("{" + items + "}");
     }
 }
