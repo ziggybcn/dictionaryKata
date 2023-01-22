@@ -16,6 +16,15 @@
         <None Update="documents\English.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Remove="NewDirectory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="NewDirectory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="NewDirectory1\**" />
     </ItemGroup>
 
 </Project>

@@ -30,8 +30,8 @@ internal class AnagramsKataTest
         kata.Anagrams.Should().HaveCount(2);
         Assert.Multiple(() =>
         {
-            Assert.That(kata.Anagrams.Any(i => i.Contains("hola") & i.Contains("halo")));
-            Assert.That(kata.Anagrams.Any(i => i.Contains("saca") & i.Contains("casa")));
+            Assert.That(kata.Anagrams.Any(i => i.Contains("hola") & i.Contains("ha-lo")));
+            Assert.That(kata.Anagrams.Any(i => i.Contains("sac'a") & i.Contains("casa")));
         });
     }
     [Test]

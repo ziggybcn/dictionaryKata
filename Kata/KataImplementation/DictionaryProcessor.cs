@@ -1,11 +1,14 @@
 
 namespace Kata;
 /// <summary>
-/// This class gets a collection of WordHashTuple elements, and detects all of the items that have the same agram hash.
+/// This class gets a collection of WordHashTuple elements, and detects all of the items that have the same anagram hash.
 /// </summary>
 internal class DictionaryProcessor
 {
     private const int MinimumWordsToBeAnAnagram = 2;
+
+    readonly Dictionary<string, AnagramGroup> anagramsIdDictionary = new();
+
     // ReSharper disable once InconsistentNaming (I prefer code-fields to be uppercase)
     private Action<AnagramGroup> NewAnagramGroupAction;
     private readonly IEnumerable<WordHashTuple> _dictionaryWords;
@@ -15,8 +18,7 @@ internal class DictionaryProcessor
         _dictionaryWords = dictionary;
         NewAnagramGroupAction = (_) => { };
     }
-
-    readonly Dictionary<string, AnagramGroup> anagramsIdDictionary = new ();
+    
 /// <summary>
 /// This method goes through all the elements in the dictionary and detects all groups of anagrams.
 /// </summary>
@@ -52,6 +54,4 @@ internal class DictionaryProcessor
             anagramsGroup.MarkedAsValidAnagramGroup = true;
         }
     }
-    
-    
 }

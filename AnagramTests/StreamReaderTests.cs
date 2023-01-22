@@ -15,7 +15,7 @@ public class StreamReaderTests
     [Test]
     [Sequential]
     public void StreamReaderIgnoresNonValidCharacters(
-        [Values("Hola's", "co-sa")] string input,
+        [Values("HolaÑs", "co$sa")] string input,
         [Values("holas", "cosa")] string output)
     {
         var reader = new StreamReader(input.ToMemoryStream());
@@ -35,7 +35,7 @@ public class StreamReaderTests
     [Test]
     public void StreamReaderParsesLines()
     {
-        var input = "Hola\nCosa\nQue";
+        var input = "Hola\nCosa\n\nQue";
 
         var reader = new StreamReader(input.ToMemoryStream());
         var result = new List<string>();

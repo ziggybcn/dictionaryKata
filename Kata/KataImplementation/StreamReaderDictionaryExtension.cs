@@ -44,6 +44,6 @@ public static class StreamReaderDictionaryExtension
 
     private static bool IsValid(this char chr)
     {
-        return chr is >= 'a' and <= 'z' || chr is >= 'A' and <= 'Z';
+        return chr is >= 'a' and <= 'z' || chr is >= 'A' and <= 'Z' || chr == '\'' || chr == '-';
     }
 }

@@ -1,5 +1,8 @@
 namespace Kata;
 
+/// <summary>
+/// This class shows the result of the anagrams calculation in the console.
+/// </summary>
 internal class ResultsDumper
 {
     private readonly IEnumerable<IEnumerable<string>> _anagrams;
