@@ -19,7 +19,7 @@ public class AnagramsKata
         var words = GetAllWords(stream);
         var wordHashTuplesList = GenerateWordsHashTuples(words);
         var dictionaryProcessor = new DictionaryProcessor(wordHashTuplesList);
-        dictionaryProcessor.ProcessAllDictionaryWords(
+        dictionaryProcessor.GroupAllAnagrams(
             detectedAnagramGroup => _anagrams.Add(detectedAnagramGroup));
         
         var timeLapse = time.ElapsedMilliseconds;

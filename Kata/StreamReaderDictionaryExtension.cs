@@ -6,7 +6,7 @@ namespace Kata;
 ///     This is an extension class for the StreamReader class that allows us to read a stream of text with the required
 ///     formatting for this Kata, so no additional processing is required.
 /// </summary>
-public static class DictionaryReader
+public static class StreamReaderDictionaryExtension
 {
     private const int DefaultWordSize = 16;
 

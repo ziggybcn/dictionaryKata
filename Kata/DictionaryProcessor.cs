@@ -20,7 +20,7 @@ internal class DictionaryProcessor
 /// This method goes through all the elements in the dictionary and detects all groups of anagrams.
 /// </summary>
 /// <param name="newAnagramAction">This action will be invoked whenever a new group of anagrams is detected in the dictionary.</param>
-    internal void ProcessAllDictionaryWords(Action<AnagramGroup> newAnagramAction)
+    internal void GroupAllAnagrams(Action<AnagramGroup> newAnagramAction)
     {
         NewAnagramGroupAction = newAnagramAction;
         var anagramsIdDictionary = new Dictionary<string, AnagramGroup>();
