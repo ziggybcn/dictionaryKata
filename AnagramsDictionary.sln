@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata", "Kata\Kata.csproj", "{2736F692-FFDB-48D1-AFC4-BCD6A27BA3AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramTests", "AnagramTests\AnagramTests.csproj", "{64B2DE75-9727-481A-9FA2-9816ABF69079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2736F692-FFDB-48D1-AFC4-BCD6A27BA3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2736F692-FFDB-48D1-AFC4-BCD6A27BA3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2736F692-FFDB-48D1-AFC4-BCD6A27BA3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B2DE75-9727-481A-9FA2-9816ABF69079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B2DE75-9727-481A-9FA2-9816ABF69079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B2DE75-9727-481A-9FA2-9816ABF69079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B2DE75-9727-481A-9FA2-9816ABF69079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
