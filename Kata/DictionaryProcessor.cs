@@ -15,7 +15,8 @@ internal class DictionaryProcessor
         _dictionaryWords = dictionary;
         NewAnagramGroupAction = (_) => { };
     }
-    
+
+    readonly Dictionary<string, AnagramGroup> anagramsIdDictionary = new ();
 /// <summary>
 /// This method goes through all the elements in the dictionary and detects all groups of anagrams.
 /// </summary>
@@ -23,13 +24,13 @@ internal class DictionaryProcessor
     internal void GroupAllAnagrams(Action<AnagramGroup> newAnagramAction)
     {
         NewAnagramGroupAction = newAnagramAction;
-        var anagramsIdDictionary = new Dictionary<string, AnagramGroup>();
+        anagramsIdDictionary.Clear();
         foreach (var dictionaryWord in _dictionaryWords)
-            ProcessWord(anagramsIdDictionary, dictionaryWord);
+            ProcessWord(dictionaryWord);
     }
 
 
-    private void ProcessWord(IDictionary<string, AnagramGroup> anagramsIdDictionary, WordHashTuple word)
+    private void ProcessWord(WordHashTuple word)
     {
         var thisAnagramGroupExists = anagramsIdDictionary.TryGetValue(word.AnagramHash, out var anagramsGroup);
         if (thisAnagramGroupExists){
